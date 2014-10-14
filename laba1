@@ -1,0 +1,27 @@
+
+<head>
+<link href="style.css" rel="stylesheet">
+<script type="text/javascript">
+function getResult (f) {
+    var a = f.a.value * 1, b = f.b.value * 1;
+    document.getElementById('result').innerHTML = 'Результат = ' + (a*b/100) 
+};
+</script>
+</head> 
+<form onsubmit="getResult(this); return false">
+<div class="main">
+<div class="field">
+   <label for="a">Число</label>
+   <input type="text" name="a" />
+</div>
+
+<div class="field">
+   <label for="b">Процент</label>
+   <input type="text" name="b" />
+</div>
+
+<input type="submit" value="Рассчитать процент от числа" />
+<div id="result"></div>
+
+</div>
+</form>
